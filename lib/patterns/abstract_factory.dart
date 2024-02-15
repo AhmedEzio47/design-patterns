@@ -2,7 +2,7 @@ import 'package:mixins/enums/platforms.dart';
 import 'package:mixins/models/button.dart';
 import 'package:mixins/models/text_field.dart';
 
-abstract class PlatformWidgetFactory {
+abstract interface class PlatformWidgetFactory {
   Button createButton();
   TextField createTextField();
 }

@@ -1,20 +1,20 @@
 import 'package:mixins/models/widget.dart';
 
-class Button extends Widget{
+abstract interface class Button implements Widget{
   @override
   void build() {
     print('Building button');
   }
 }
 
-class AndroidButton extends Button {
+class AndroidButton implements Button {
   @override
   void build() {
     print('Building Android button');
   }
 }
 
-class IOSButton extends Button {
+class IOSButton implements Button {
   @override
   void build() {
     print('Building IOS button');

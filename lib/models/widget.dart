@@ -1,5 +1,3 @@
-class Widget{
-  void build(){
-    print('Building widget');
-}
+abstract interface class Widget{
+  void build();
 }

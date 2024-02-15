@@ -1,10 +1,8 @@
 import 'package:mixins/models/widget.dart';
 
-class TextField extends Widget {
+abstract interface class TextField implements Widget {
   @override
-  void build() {
-    print('Building text field');
-  }
+  void build();
 }
 
 class AndroidTextField extends TextField {
