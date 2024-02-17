@@ -5,6 +5,7 @@ import 'package:mixins/models/pet.dart';
 import 'package:mixins/patterns/abstract_factory.dart';
 import 'package:mixins/patterns/builder.dart';
 import 'package:mixins/patterns/factory.dart';
+import 'package:mixins/patterns/prototype.dart';
 
 void main(List<String> arguments) {
   /// Factory pattern example
@@ -30,4 +31,8 @@ void main(List<String> arguments) {
       .build();
   print(car.toString());
   print(CarBuilder.buildBugatti().toString());
+
+  /// Prototype pattern example
+  Vehicle classicCar = ClassicCar(brand: 'Mercedes');
+  print(classicCar.clone().toString());
 }
