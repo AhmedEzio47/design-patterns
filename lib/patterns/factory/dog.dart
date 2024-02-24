@@ -1,4 +1,4 @@
-import 'package:mixins/models/pet.dart';
+import 'package:design_patterns/patterns/factory/pet.dart';
 
 class Dog extends Pet {
   Dog(super.name);

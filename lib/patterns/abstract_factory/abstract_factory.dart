@@ -1,9 +1,10 @@
-import 'package:mixins/enums/platforms.dart';
-import 'package:mixins/models/button.dart';
-import 'package:mixins/models/text_field.dart';
+import 'package:design_patterns/enums/platforms.dart';
+import 'package:design_patterns/patterns/abstract_factory/button.dart';
+import 'package:design_patterns/patterns/abstract_factory/text_field.dart';
 
 abstract interface class PlatformWidgetFactory {
   Button createButton();
+
   TextField createTextField();
 }
 

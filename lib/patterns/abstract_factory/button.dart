@@ -1,6 +1,6 @@
-import 'package:mixins/models/widget.dart';
+import 'package:design_patterns/patterns/abstract_factory/widget.dart';
 
-abstract interface class Button implements Widget{
+abstract interface class Button implements Widget {
   @override
   void build() {
     print('Building button');

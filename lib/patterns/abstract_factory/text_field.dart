@@ -1,4 +1,4 @@
-import 'package:mixins/models/widget.dart';
+import 'package:design_patterns/patterns/abstract_factory/widget.dart';
 
 abstract interface class TextField implements Widget {
   @override

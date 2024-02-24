@@ -1,4 +1,4 @@
-import 'package:mixins/models/car.dart';
+import 'package:design_patterns/patterns/builder/car.dart';
 
 class CarBuilder {
   String? model;
