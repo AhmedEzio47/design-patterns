@@ -35,4 +35,13 @@ void main(List<String> arguments) {
   /// Prototype pattern example
   Vehicle classicCar = ClassicCar(brand: 'Mercedes');
   print(classicCar.clone().toString());
+
+  /// Chain of responsibility pattern example
+  LeaveApplication application = LeaveApplication(
+    leaveType: LeaveTypes.sick,
+    startDate: DateTime(2024, 2, 20),
+    endDate: DateTime(2024, 2, 25),
+    employee: Associate(name: 'Ahmed', salary: 3000),
+  );
+  ChainOfResponsibility.createChain().processLeaveApplication(application);
 }
