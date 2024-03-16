@@ -68,12 +68,7 @@ void main(List<String> arguments) async {
   /// Decorator pattern example
   Message message = TextMessage('The <FORCE> is strong within you!');
   Message htmlEncodedMessage = HtmlEncodedMessage(message);
-
-  /// One of the strengths of the Decorator pattern is that it can be used recursively
-  /// which means that you can wrap objects with multiple decorators
-  Message base64EncodedMessage = Base64EncodedMessage(htmlEncodedMessage);
   Logger.consoleLog(
       patternName: 'Decorator',
-      printable:
-          '${message.getContent()} \n${htmlEncodedMessage.getContent()} \n${base64EncodedMessage.getContent()}');
+      printable: '${message.getContent()} \n ${htmlEncodedMessage.getContent()}');
 }
