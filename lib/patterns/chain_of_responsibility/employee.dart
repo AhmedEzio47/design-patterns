@@ -14,13 +14,13 @@ abstract class Employee implements LeaveApprover {
   bool approveLeave(LeaveApplication leaveApplication);
 
   @override
-  void processLeaveApplication(LeaveApplication leaveApplication) {
+  String processLeaveApplication(LeaveApplication leaveApplication) {
     if (approveLeave(leaveApplication)) {
-      print('$name approved the leave for ${leaveApplication.employee.name}\n');
+      return ('$name approved the leave for ${leaveApplication.employee.name}\n');
     } else if (successor != null) {
-      successor?.processLeaveApplication(leaveApplication);
+      return successor?.processLeaveApplication(leaveApplication) ?? '';
     } else {
-      print('No one is available to approve the leave for ${leaveApplication.employee.name}\n');
+      return ('No one is available to approve the leave for ${leaveApplication.employee.name}\n');
     }
   }
 }

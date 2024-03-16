@@ -26,14 +26,15 @@ void main(List<String> arguments) async {
   Logger.consoleLog(patternName: 'Prototype', printable: classicCar.clone().toString());
 
   /// Chain of responsibility pattern example
-  Logger.patternExampleTitle('Chain of responsibility');
   LeaveApplication application = LeaveApplication(
     leaveType: LeaveTypes.sick,
     startDate: DateTime(2024, 2, 20),
     endDate: DateTime(2024, 2, 25),
     employee: Associate(name: 'Ahmed', salary: 3000),
   );
-  ChainOfResponsibility.createChain().processLeaveApplication(application);
+  Logger.consoleLog(
+      patternName: 'Chain of responsibility',
+      printable: ChainOfResponsibility.createChain().processLeaveApplication(application));
 
   /// Adapter pattern example
   EmployeeClassAdapter classAdapter = EmployeeClassAdapter(
@@ -63,4 +64,11 @@ void main(List<String> arguments) async {
   queue.offer(3);
   queue.poll();
   Logger.consoleLog(patternName: 'Bridge', printable: queue.peek().toString());
+
+  /// Decorator pattern example
+  Message message = TextMessage('The <FORCE> is strong within you!');
+  Message htmlEncodedMessage = HtmlEncodedMessage(message);
+  Logger.consoleLog(
+      patternName: 'Decorator',
+      printable: '${message.getContent()} \n ${htmlEncodedMessage.getContent()}');
 }
