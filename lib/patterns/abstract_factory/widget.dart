@@ -1,3 +1,3 @@
-abstract interface class Widget{
-  void build();
+abstract interface class Widget {
+  String build();
 }

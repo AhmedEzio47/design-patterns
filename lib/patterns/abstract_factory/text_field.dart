@@ -2,19 +2,19 @@ import 'package:design_patterns/patterns/abstract_factory/widget.dart';
 
 abstract interface class TextField implements Widget {
   @override
-  void build();
+  String build();
 }
 
 class AndroidTextField extends TextField {
   @override
-  void build() {
-    print('Building Android text field');
+  String build() {
+    return 'Building Android text field';
   }
 }
 
 class IOSTextField extends TextField {
   @override
-  void build() {
-    print('Building IOS text field');
+  String build() {
+    return 'Building IOS text field';
   }
 }

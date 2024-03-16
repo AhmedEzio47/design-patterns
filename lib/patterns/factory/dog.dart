@@ -4,7 +4,7 @@ class Dog extends Pet {
   Dog(super.name);
 
   @override
-  void speak() {
-    print('$name is woofing');
+  String speak() {
+    return '$name is woofing';
   }
 }

@@ -16,11 +16,11 @@ abstract class Employee implements LeaveApprover {
   @override
   void processLeaveApplication(LeaveApplication leaveApplication) {
     if (approveLeave(leaveApplication)) {
-      print('$name approved the leave for ${leaveApplication.employee.name}');
+      print('$name approved the leave for ${leaveApplication.employee.name}\n');
     } else if (successor != null) {
       successor?.processLeaveApplication(leaveApplication);
     } else {
-      print('No one is available to approve the leave for ${leaveApplication.employee.name}');
+      print('No one is available to approve the leave for ${leaveApplication.employee.name}\n');
     }
   }
 }

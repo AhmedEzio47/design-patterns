@@ -2,21 +2,21 @@ import 'package:design_patterns/patterns/abstract_factory/widget.dart';
 
 abstract interface class Button implements Widget {
   @override
-  void build() {
-    print('Building button');
+  String build() {
+    return ('Building button');
   }
 }
 
 class AndroidButton implements Button {
   @override
-  void build() {
-    print('Building Android button');
+  String build() {
+    return ('Building Android button');
   }
 }
 
 class IOSButton implements Button {
   @override
-  void build() {
-    print('Building IOS button');
+  String build() {
+    return ('Building IOS button');
   }
 }

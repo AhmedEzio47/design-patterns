@@ -3,5 +3,5 @@ abstract class Pet {
 
   Pet(this.name);
 
-  void speak();
+  String speak();
 }
