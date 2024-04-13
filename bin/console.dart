@@ -7,23 +7,31 @@ void main(List<String> arguments) async {
 
   /// Abstract factory pattern example
   UIFactory uiFactory = UIFactory();
-  PlatformWidgetFactory androidFactory = uiFactory.createFactory(Platforms.android);
+  PlatformWidgetFactory androidFactory =
+      uiFactory.createFactory(Platforms.android);
   androidFactory.createButton().build();
   PlatformWidgetFactory iosFactory = uiFactory.createFactory(Platforms.ios);
   Logger.consoleLog(
-      patternName: 'Abstract factory', printable: iosFactory.createTextField().build());
+      patternName: 'Abstract factory',
+      printable: iosFactory.createTextField().build());
 
   /// Builder pattern example
   /// Just add the fields you want
   CarBuilder carBuilder = CarBuilder();
-  Car car =
-      carBuilder.withModel('Model S').withBrand('Tesla').withColor('Red').withPrice(100000).build();
+  Car car = carBuilder
+      .withModel('Model S')
+      .withBrand('Tesla')
+      .withColor('Red')
+      .withPrice(100000)
+      .build();
   Logger.consoleLog(patternName: 'Builder', printable: car.toString());
-  Logger.consoleLog(patternName: 'Builder', printable: CarBuilder.buildBugatti().toString());
+  Logger.consoleLog(
+      patternName: 'Builder', printable: CarBuilder.buildBugatti().toString());
 
   /// Prototype pattern example
   Vehicle classicCar = ClassicCar(brand: 'Mercedes');
-  Logger.consoleLog(patternName: 'Prototype', printable: classicCar.clone().toString());
+  Logger.consoleLog(
+      patternName: 'Prototype', printable: classicCar.clone().toString());
 
   /// Chain of responsibility pattern example
   LeaveApplication application = LeaveApplication(
@@ -34,7 +42,8 @@ void main(List<String> arguments) async {
   );
   Logger.consoleLog(
       patternName: 'Chain of responsibility',
-      printable: ChainOfResponsibility.createChain().processLeaveApplication(application));
+      printable: ChainOfResponsibility.createChain()
+          .processLeaveApplication(application));
 
   /// Adapter pattern example
   EmployeeClassAdapter classAdapter = EmployeeClassAdapter(
@@ -45,7 +54,8 @@ void main(List<String> arguments) async {
     address: 'Cairo, Egypt',
   );
   Logger.consoleLog(
-      patternName: 'Classic Adapter', printable: BusinessCardDesigner.designCard(classAdapter));
+      patternName: 'Classic Adapter',
+      printable: BusinessCardDesigner.designCard(classAdapter));
 
   EmployeeObjectAdapter objectAdapter = EmployeeObjectAdapter(Person(
     firstName: 'Ahmed',
@@ -54,7 +64,8 @@ void main(List<String> arguments) async {
     position: 'Senior Mobile Engineer',
   ));
   Logger.consoleLog(
-      patternName: 'Object Adapter', printable: BusinessCardDesigner.designCard(objectAdapter));
+      patternName: 'Object Adapter',
+      printable: BusinessCardDesigner.designCard(objectAdapter));
 
   /// Bridge pattern example
   final linkedList = SinglyLinkedList<int>();
@@ -76,4 +87,14 @@ void main(List<String> arguments) async {
       patternName: 'Decorator',
       printable:
           '${message.getContent()} \n${htmlEncodedMessage.getContent()} \n${base64EncodedMessage.getContent()}');
+
+  /// Composite pattern example
+  Logger.consoleLog(
+    patternName: 'Composite directory',
+    printable: Composite.createTree1().ls(),
+  );
+  Logger.consoleLog(
+    patternName: 'Composite single file',
+    printable: Composite.createTree2().ls(),
+  );
 }
