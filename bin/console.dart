@@ -97,4 +97,10 @@ void main(List<String> arguments) async {
     patternName: 'Composite single file',
     printable: Composite.createTree2().ls(),
   );
+
+  /// Facade pattern example
+  Logger.consoleLog(
+    patternName: 'Facade',
+    printable: AuthFacade().authenticate('test@test.com', 'password'),
+  );
 }

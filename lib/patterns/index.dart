@@ -5,5 +5,6 @@ export 'builder/index.dart';
 export 'chain_of_responsibility/index.dart';
 export 'composite/index.dart';
 export 'decorator/index.dart';
+export 'facade/index.dart';
 export 'factory/index.dart';
 export 'prototype/index.dart';
